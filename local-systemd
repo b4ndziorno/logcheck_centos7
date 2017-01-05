@@ -1,1 +1,3 @@
-/etc/logcheck/ignore.d.server/local-systemd
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: (Created|Removed) slice user-[[:digit:]]+.slice.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: (Started|Starting) Session [0-9]+ of user [._[:alnum:]]+\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: (Starting|Stopping) user-[[:digit:]]+.slice.$

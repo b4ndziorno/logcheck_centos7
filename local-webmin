@@ -1,1 +1,1 @@
-/etc/logcheck/ignore.d.server/local-webmin
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ webmin\[[0-9]+\]: Timeout of session for .*$

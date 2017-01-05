@@ -1,1 +1,2 @@
-/etc/logcheck/ignore.d.server/local-cron
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ CROND\[[0-9]+\]:.+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ run-parts\(\/etc\/cron\.hourly\)\[[0-9]+\]: (starting|finished) (0anacron|0yum-hourly\.cron|awstats)$

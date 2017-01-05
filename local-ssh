@@ -1,1 +1,3 @@
-/etc/logcheck/ignore.d.server/local-ssh
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [.[:digit:]]+: [[:digit:]]+: [[:alnum:]]+ \[[[:alnum:]]+\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: pam_succeed_if\(sshd:auth\): requirement "uid >= 1000" not met by user "[[:alnum:]]+"$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: Read from socket failed: Connection reset by peer \[preauth\]$

@@ -1,1 +1,9 @@
-/etc/logcheck/ignore.d.server/local-su
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su: (\+|-) (/dev/)?(pts/[0-9]{1,2}|tty[0-9]) [_[:alnum:]-]+:[_[:alnum:]-]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su: Successful su for [[:alnum:]-]+ by [[:alnum:]-]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su: \(pam_[[:alnum:]]+\) session closed for user [[:alnum:]-]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su: \(pam_[[:alnum:]]+\) session opened for user [[:alnum:]-]+ by ([[:alnum:]-]+)?\(uid=[0-9]+\)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su: \+ \?\?\? root:[_[:alnum:]-]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su: pam_[[:alnum:]]+\(su:session\): session closed for user [[:alnum:]-]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su: pam_[[:alnum:]]+\(su:session\): session opened for user [[:alnum:]-]+ by ([[:alnum:]-]+)?\(uid=[0-9]+\)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su: pam_authenticate: Authentication failure$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ su: pam_unix\(su:session\): session (opened|closd) for user [[:alnum:].]+ by \(uid=0\)$

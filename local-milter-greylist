@@ -1,1 +1,8 @@
-/etc/logcheck/ignore.d.server/local-milter-greylist
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ milter-greylist: smfi_getsymval failed for {if_addr}$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ milter-greylist: [[:alnum:]]+: skipping greylist because this is the default action, .+ ACL 64$
+#^\w{3} [ :0-9]{11} [._[:alnum:]-]+ milter-greylist: smfi_getsymval failed for \{[[:alnum:]_]+\}$
+#^\w{3} [ :0-9]{11} [._[:alnum:]-]+ milter-greylist: Sender IP [0-9.]{7,15} and address [^[:space:]]+ are SPF-compliant, bypassing greylist$
+#^\w{3} [ :0-9]{11} [._[:alnum:]-]+ milter-greylist: \(unknown id\): addr [._[:alnum:]-]+\[[0-9.]{7,15}\] from <[^[:space:]]+> to <[^[:space:]]+> delayed for [0-9:]{7,10} \(ACL [0-9]{1,5}\)$
+#^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtpd\[[0-9]+\]: NOQUEUE: milter-reject: RCPT from [._[:alnum:]-]+\[[0-9.]{7,15}\]: 451 4.7.1 Greylisting in action, please come back later; from=<[^[:space:]]+> to=<[^[:space:]]+> proto=(SMTP|ESMTP) helo=<[^[:space:]]+>$
+#^\w{3} [ :0-9]{11} [._[:alnum:]-]+ milter-greylist: \(unknown id\): addr [0-9.]{7,15} from [^[:space:]]+ rcpt [^[:space:]]+: autowhitelisted (for|for more) [0-9:]{7,10}$
+#^\w{3} [ :0-9]{11} [._[:alnum:]-]+ milter-greylist: User [.[:alnum:]@-]+ authenticated, bypassing greylisting$
