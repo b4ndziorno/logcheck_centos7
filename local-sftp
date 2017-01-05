@@ -1,0 +1,2 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ proftpd: pam_unix\(proftpd:[[:alnum:]]+\): authentication failure; logname= uid=0 euid=0 tty=[\/[:alnum:]]+ ruser=[-_.[:alnum:]]* rhost=[-_.:[:alnum:]]+  user=[-_.[:alnum:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ proftpd: pam_succeed_if\(proftpd:auth\): requirement "uid >= 1000" not met by user "[[:alnum:]]+"$
